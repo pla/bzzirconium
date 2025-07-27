@@ -1,5 +1,6 @@
 require("tech-updates")
 require("zirconium-recipe-updates")
+require("zirconium-recipe-updates-lds")
 require("zirconium-asteroid-updates")
 require("zircon-matter")
 require("map-gen-preset-updates")
