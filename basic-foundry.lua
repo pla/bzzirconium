@@ -1,5 +1,5 @@
 local futil = require("util")
-local util = require("data-util");
+local util = require("data-util")
 local item_sounds = require("__base__.prototypes.item_sounds")
 local sounds = require("__base__.prototypes.entity.sounds")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
@@ -118,7 +118,7 @@ data:extend({
   {
     type = "recipe",
     name = "basic-foundry",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     ingredients =
     {
@@ -134,7 +134,7 @@ data:extend({
     type = "recipe",
     name = "steel-basic",  -- another steel option
     localised_name = {"item-name.steel-plate"},
-    category = "basic-metallurgy",
+    categories = {"basic-metallurgy"},
     order = "a[smelting]-c[steel-plate]-z",
     enabled = false,
     energy_required = 3.2,

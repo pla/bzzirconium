@@ -1,5 +1,5 @@
-local futil = require("util");
-local util = require("data-util");
+local futil = require("util")
+local util = require("data-util")
 
 if util.me.ammo() then
   local mag = {
@@ -87,7 +87,7 @@ if util.me.ammo() then
       {
         type = "recipe",
         name = "explosive-rounds-magazine",
-        category = "crafting-with-fluid",
+        categories = {"crafting-with-fluid"},
         enabled = false,
         energy_required = 6 * ct,
         ingredients = mag,
@@ -120,7 +120,7 @@ if util.me.ammo() then
         icon_size = 64,
         icon_mipmaps = 4,
         ammo_type = {
-          category = "bullet",
+          categories = {"bullet"},
           cooldown_modifier = 0.8,
           target_type = k_target_type,
           action = {
@@ -219,7 +219,7 @@ if util.me.ammo() then
       {
         type = "recipe",
         name = "explosive-rounds-rifle-magazine",
-        category = "crafting-with-fluid",
+        categories = {"crafting-with-fluid"},
         energy_required = 2.5*ct,
         enabled = false,
         ingredients = rmag,
@@ -234,7 +234,7 @@ if util.me.ammo() then
         icon_size = 64,
         icon_mipmaps = 4,
         ammo_type = {
-          category = "anti-material-rifle-ammo",
+          categories = {"anti-material-rifle-ammo"},
           target_type = k_target_type,
           action = {
             {
@@ -328,7 +328,7 @@ if util.me.ammo() then
       {
         type = "recipe",
         name = "explosive-rounds-anti-material-rifle-magazine",
-        category = "crafting-with-fluid",
+        categories = {"crafting-with-fluid"},
         energy_required = 6*ct,
         enabled = false,
         ingredients = ammag,

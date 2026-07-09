@@ -1,4 +1,4 @@
-local util = require("data-util");
+local util = require("data-util")
 
 if mods["space-age"] then
   -- Due to explosives changes, we have to make some changes to asteroid processing.
@@ -13,7 +13,7 @@ if mods["space-age"] then
         {icon="__space-age__/graphics/icons/advanced-oxide-asteroid-crushing.png", icon_size=64},
         {icon="__bzzirconium__/graphics/icons/zirconia.png", icon_size=128, scale=0.1875, shift={0,8}},
       },
-      category = "crushing",
+      categories = {"crushing"},
       subgroup="space-crushing",
       order = "f[advanced-oxide-asteroid-crushing]-z[zirconia]",
       auto_recycle = false,
@@ -28,7 +28,7 @@ if mods["space-age"] then
         {type = "item", name = "ice", amount = 1},
         {type = "item", name = "calcite", amount = 1},
         {type = "item", name = "zirconia", amount = 3},
-        {type = "item", name = "oxide-asteroid-chunk", amount = 1, probability = 0.05}
+        {type = "item", name = "oxide-asteroid-chunk", amount = 1, independent_probability = 0.05}
       },
       hide_from_signal_gui = false,
       allow_productivity = true,

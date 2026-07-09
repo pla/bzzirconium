@@ -1,5 +1,5 @@
 -- Enriched Titanium for Krastorio2
-local util = require("__bzzirconium__.data-util");
+local util = require("__bzzirconium__.data-util")
 
 if mods["Krastorio2"] then
 data:extend({
@@ -23,7 +23,7 @@ data:extend({
     name = "enriched-zircon",
     icon = "__bzzirconium__/graphics/icons/enriched-zircon.png",
     icon_size = 128,
-    category = "chemistry",
+    categories = {"chemistry"},
     main_product = "enriched-zircon",
     energy_required = 3,
     enabled = false,
@@ -60,7 +60,7 @@ data:extend({
         { icon = "__bzzirconium__/graphics/icons/zirconia.png",        icon_size = 128},
         { icon = "__bzzirconium__/graphics/icons/enriched-zircon.png", icon_size = 128, scale = 0.125,    shift = { -8, -8 } },
       },
-      category = "smelting",
+      categories = {"smelting"},
       energy_required = 24,
       enabled = false,
       always_show_made_in = true,
@@ -76,7 +76,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-zircon",
-		category = "kr-fluid-filtration",
+		categories = {"kr-fluid-filtration"},
 		icons =
 		{
 			{
@@ -103,10 +103,10 @@ data:extend({
 		results =
 		{
 			{type = "fluid", name = "water", amount = 90, ignored_by_stats=90, ignored_by_productivity=90},
-			{type = "item",  name = "stone", probability = 0.20, amount = 1},
-			{type = "item",  name = "zircon", probability = 0.20, amount = 1},
+			{type = "item",  name = "stone", independent_probability = 0.20, amount = 1},
+			{type = "item",  name = "zircon", independent_probability = 0.20, amount = 1},
       (mods.bztitanium and util.me.byproduct()) and
-      {type = "item",  name = "titanium-ore", probability = 0.20, amount = 1} or nil,
+      {type = "item",  name = "titanium-ore", independent_probability = 0.20, amount = 1} or nil,
 		},
 		crafting_machine_tint =
 		{

@@ -10,7 +10,7 @@ if not data.raw.recipe["stone-from-lava"] then
      {icon = "__space-age__/graphics/icons/fluid/lava.png", icon_size=64, shift={0,-8}},
      {icon = "__base__/graphics/icons/stone.png", icon_size=64, scale = 0.333, shift={0,8}},
     },
-    category = "metallurgy",
+    categories = {"metallurgy"},
     subgroup = "vulcanus-processes",
     order = "a[melting]-a[lava-a]",
     auto_recycle = false,
@@ -33,14 +33,14 @@ if not data.raw.recipe["stone-from-lava"] then
 end
 
 -- Any stone byproduct from lava is part stone, part zircon
-for _, recipe in pairs(data.raw.recipe) do
-  if recipe.category == "metallurgy" and recipe.name:find("from.lava") then
-    local amount = util.get_amount(recipe.name, "stone")
-    if amount then
-      util.replace_some_product(recipe.name, "stone", amount / 2, "zircon", amount / 2) 
-      log(amount.." Did "..recipe.name)
-    end
-  end
-end
+-- for _, recipe in pairs(data.raw.recipe) do
+--   if recipe.category == "metallurgy" and recipe.name:find("from.lava") then
+--     local amount = util.get_amount(recipe.name, "stone")
+--     if amount then
+--       util.replace_some_product(recipe.name, "stone", amount / 2, "zircon", amount / 2) 
+--       log(amount.." Did "..recipe.name)
+--     end
+--   end
+-- end
 
 end
